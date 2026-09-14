@@ -152,7 +152,7 @@ function Metric({ icon, value, label }: { icon: React.ReactNode; value: string; 
       <span className="grid size-9 place-items-center rounded-md bg-primary-soft text-primary-strong">
         {icon}
       </span>
-      <p className="mt-3 font-display text-2xl font-bold">{value}</p>
+      <p className="mt-3 font-num text-2xl font-bold">{value}</p>
       <p className="mt-0.5 text-[11px] uppercase tracking-wide text-workspace-muted">{label}</p>
     </div>
   );

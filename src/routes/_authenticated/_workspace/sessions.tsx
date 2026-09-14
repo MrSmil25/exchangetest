@@ -233,7 +233,7 @@ function Stat({
     <div className="rounded-lg border border-workspace-border bg-workspace-card p-5">
       <p className="text-[11px] font-semibold uppercase tracking-wide text-workspace-muted">{label}</p>
       <p
-        className={`mt-2 font-display text-2xl font-bold ${accent ? "text-primary-strong" : "text-workspace-foreground"}`}
+        className={`mt-2 font-num text-2xl font-bold ${accent ? "text-primary-strong" : "text-workspace-foreground"}`}
       >
         {value}
       </p>
