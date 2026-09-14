@@ -2,17 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BadgeCheck,
-  BarChart3,
   BookOpenCheck,
-  BriefcaseBusiness,
-  Code2,
   Menu,
   Network,
   Presentation,
   Search,
   Share2,
   Sparkles,
-  Users,
   X,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";

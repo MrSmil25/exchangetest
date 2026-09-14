@@ -1,5 +1,4 @@
 import {
-  ArrowDown,
   BadgeCheck,
   BriefcaseBusiness,
   Check,
@@ -58,7 +57,7 @@ export function ScrollSkillUniverse() {
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (!visible) return;
-        const index = Number((visible.target as HTMLElement).dataset.step);
+        const index = Number((visible.target as HTMLElement).dataset["step"]);
         if (Number.isFinite(index)) setActiveStep(index);
       },
       { rootMargin: "-28% 0px -38% 0px", threshold: [0, 0.2, 0.5, 0.8] },
@@ -125,6 +124,8 @@ export function ScrollSkillUniverse() {
 }
 
 function UniverseStage({ activeStep, compact = false }: { activeStep: number; compact?: boolean }) {
+  const currentStep = journey[activeStep] ?? journey[0];
+
   return (
     <div className={`story-stage relative w-full overflow-hidden border border-glass-border bg-glass-surface shadow-universe backdrop-blur-3xl ${compact ? "h-[430px] rounded-lg" : "aspect-[1.04] max-h-[720px] rounded-lg"}`}>
       <div className="neural-grid absolute inset-0 opacity-35" />
@@ -138,7 +139,7 @@ function UniverseStage({ activeStep, compact = false }: { activeStep: number; co
       <div className="absolute inset-x-5 bottom-5 z-30 flex items-center justify-between rounded-md border border-glass-border bg-glass-strong/85 px-4 py-3 backdrop-blur-xl">
         <div className="flex items-center gap-3">
           <span className="grid size-8 place-items-center rounded-full border border-signal/30 bg-signal/10 text-signal"><Sparkles className="size-3.5" /></span>
-          <div><p className="text-[9px] uppercase text-muted-foreground">Current stage</p><p className="mt-0.5 text-xs font-semibold">{journey[activeStep].short}</p></div>
+          <div><p className="text-[9px] uppercase text-muted-foreground">Current stage</p><p className="mt-0.5 text-xs font-semibold">{currentStep.short}</p></div>
         </div>
         <div className="flex gap-1.5" aria-hidden>
           {journey.map((step, index) => <span key={step.number} className={`h-1 rounded-full transition-all duration-500 ${activeStep === index ? "w-7 bg-signal" : "w-2 bg-glass-border"}`} />)}
