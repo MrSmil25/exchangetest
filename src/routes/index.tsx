@@ -2,21 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BadgeCheck,
-  BarChart3,
   BookOpenCheck,
-  BriefcaseBusiness,
-  Code2,
   Menu,
   Network,
   Presentation,
   Search,
   Share2,
   Sparkles,
-  Users,
   X,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
+import { ScrollSkillUniverse } from "@/components/exchange/scroll-skill-universe";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -117,16 +114,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section id="how-it-works" className="scroll-mt-18 border-b border-glass-border py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-            <SectionHeading eyebrow="One living system" title="Knowledge becomes momentum." text="Every exchange creates learning, contribution, and career evidence—three signals connected in one professional identity." />
-            <div className="mt-16 grid gap-4 lg:grid-cols-3">
-              <GlassStep number="01" icon={<Search />} title="Discover a peer" text="Find trusted students by skill relevance, faculty context, availability, and reputation." />
-              <GlassStep number="02" icon={<Presentation />} title="Exchange knowledge" text="Teach to earn Credits. Learn to turn access into practical, demonstrated ability." />
-              <GlassStep number="03" icon={<BadgeCheck />} title="Build your proof" text="Completed sessions, assessment, and peer ratings become verified career evidence." />
-            </div>
-          </div>
-        </section>
+        <ScrollSkillUniverse />
 
         <section id="passport" className="scroll-mt-18 border-b border-glass-border bg-deep-surface py-24 sm:py-32">
           <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
@@ -193,8 +181,6 @@ function SkillUniverse() {
 
 function HeroStat({ value, label }: { value: string; label: string }) { return <div className="border-r border-glass-border px-3 first:pl-0 last:border-r-0"><p className="font-num text-xl font-bold">{value}</p><p className="mt-1 text-[10px] uppercase text-muted-foreground">{label}</p></div>; }
 function Signal({ icon, label, value }: { icon: ReactNode; label: string; value: string }) { return <div className="flex items-center gap-3 bg-glass-strong px-5 py-4 backdrop-blur-2xl"><span className="text-signal [&>svg]:size-4">{icon}</span><div><p className="text-[10px] uppercase text-muted-foreground">{label}</p><p className="mt-1 text-sm font-semibold">{value}</p></div></div>; }
-function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) { return <div className="grid gap-6 lg:grid-cols-[0.6fr_1.2fr_1fr] lg:items-end"><p className="text-[11px] font-semibold uppercase text-signal">{eyebrow}</p><h2 className="font-display text-4xl font-bold leading-tight sm:text-5xl">{title}</h2><p className="max-w-md text-sm leading-7 text-muted-foreground lg:justify-self-end">{text}</p></div>; }
-function GlassStep({ number, icon, title, text }: { number: string; icon: ReactNode; title: string; text: string }) { return <article className="group min-h-72 rounded-lg border border-glass-border bg-glass-surface p-7 shadow-glass backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-signal/40"><div className="flex items-start justify-between"><span className="grid size-11 place-items-center rounded-md border border-glass-border bg-glass-strong text-signal [&>svg]:size-5">{icon}</span><span className="font-display text-4xl font-bold text-glass-border">{number}</span></div><h3 className="mt-16 font-display text-xl font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p></article>; }
 function PassportPoint({ icon, text }: { icon: ReactNode; text: string }) { return <div className="flex items-center gap-3 text-sm"><span className="grid size-9 place-items-center rounded-md border border-glass-border bg-glass-surface text-signal [&>svg]:size-4">{icon}</span>{text}</div>; }
 function IdentityPassport() { return <div className="relative mx-auto w-full max-w-2xl"><div className="absolute -inset-5 rounded-full bg-aurora-haze blur-3xl" /><div className="relative overflow-hidden rounded-lg border border-glass-border bg-glass-strong p-6 shadow-universe backdrop-blur-3xl sm:p-8"><div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between"><div className="flex items-center gap-4"><span className="grid size-14 place-items-center rounded-lg border border-glass-border bg-glass-surface font-display text-lg font-bold text-signal">RM</span><div><p className="flex items-center gap-2 font-display text-xl font-bold">Raka Mahendra <BadgeCheck className="size-4 text-signal" /></p><p className="mt-1 text-xs text-muted-foreground">FEB · Management · Year 3</p></div></div><div className="text-left sm:text-right"><p className="text-[10px] uppercase text-muted-foreground">Skill Score</p><p className="font-num text-4xl font-bold text-aurora">780</p></div></div><div className="mt-8 grid grid-cols-3 gap-px border-y border-glass-border bg-glass-border py-px"><PassportMetric value="4" label="Verified skills" /><PassportMetric value="15" label="Students helped" /><PassportMetric value="31" label="Exchanges" /></div><div className="mt-7"><div className="flex items-center justify-between"><p className="text-[10px] font-semibold uppercase text-muted-foreground">Professional evidence</p><span className="text-[10px] font-semibold text-signal">IDENTITY VERIFIED</span></div><div className="mt-4 space-y-3"><PassportSkill label="Excel Analytics" value="92" /><PassportSkill label="Business Case Framework" value="84" /><PassportSkill label="Public Speaking" value="76" /></div></div></div></div>; }
 function PassportMetric({ value, label }: { value: string; label: string }) { return <div className="bg-glass-strong p-4 text-center"><p className="font-num text-lg font-bold">{value}</p><p className="mt-1 text-[9px] uppercase text-muted-foreground">{label}</p></div>; }

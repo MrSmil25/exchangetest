@@ -6,4 +6,4 @@
 - [x] Build skill-identity dashboard
 - [x] Add all requested workspace destinations
 - [x] Verify signed-out access and responsive layouts
-- [ ] Transform the landing-page journey into a four-stage scroll-driven skill universe
+- [x] Transform the landing-page journey into a four-stage scroll-driven skill universe
