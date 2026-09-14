@@ -330,7 +330,7 @@ function SkillStat({
     <div className="rounded-lg border border-workspace-border bg-workspace-card p-4">
       <p className="text-[11px] uppercase text-workspace-muted">{category}</p>
       <p className="mt-1 font-display text-sm font-bold leading-snug">{name}</p>
-      <p className="mt-3 font-display text-2xl font-bold text-primary-strong">{value}</p>
+      <p className="mt-3 font-num text-2xl font-bold text-primary-strong">{value}</p>
       <p className="mt-0.5 text-[11px] text-workspace-muted">{caption}</p>
     </div>
   );
