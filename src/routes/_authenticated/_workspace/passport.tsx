@@ -60,7 +60,7 @@ function PassportPage() {
               {me.photo}
             </span>
             <div>
-              <p className="flex items-center gap-2 font-display text-2xl font-bold">
+              <p className="flex items-center gap-2 font-num text-2xl font-bold">
                 {me.name}
                 <ShieldCheck className="size-5 text-primary" aria-label="Identity verified" />
               </p>
@@ -85,7 +85,7 @@ function PassportPage() {
           <div className="flex flex-col items-start gap-4 sm:items-end">
              <div className="rounded-lg border border-glass-border bg-glass-surface px-6 py-4 text-center shadow-signal backdrop-blur-xl">
                <p className="text-[11px] font-semibold uppercase text-muted-foreground">Skill Score</p>
-               <p className="mt-1 font-display text-4xl font-bold text-aurora">{me.skillScore}</p>
+               <p className="mt-1 font-num text-4xl font-bold text-aurora">{me.skillScore}</p>
                <p className="text-[11px] text-muted-foreground">Top 12% on campus</p>
             </div>
             <div className="flex gap-2">
@@ -147,7 +147,7 @@ function PassportPage() {
                   </div>
                   <div className="shrink-0 text-right">
                     <p className="text-[11px] uppercase text-muted-foreground">Competency</p>
-                    <p className="font-display text-2xl font-bold">
+                    <p className="font-num text-2xl font-bold">
                       {entry.competency}
                       <span className="text-sm text-muted-foreground">/100</span>
                     </p>
@@ -262,7 +262,7 @@ function Contribution({ icon, value, label }: { icon: React.ReactNode; value: st
        <span className="grid size-9 place-items-center rounded-md border border-glass-border bg-glass-surface text-signal">
         {icon}
       </span>
-      <p className="mt-3 font-display text-2xl font-bold">{value}</p>
+      <p className="mt-3 font-num text-2xl font-bold">{value}</p>
       <p className="mt-0.5 text-[11px] uppercase tracking-wide text-muted-foreground">{label}</p>
     </div>
   );

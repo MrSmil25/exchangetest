@@ -157,7 +157,7 @@ function ProfilePage() {
 
           <div className="rounded-lg bg-sidebar p-6 text-sidebar-foreground">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-primary">Member since</p>
-            <p className="mt-3 font-display text-xl font-bold">{profileStats.joined}</p>
+            <p className="mt-3 font-num text-xl font-bold">{profileStats.joined}</p>
             <p className="mt-2 text-xs leading-5 text-sidebar-muted">
               {profileStats.exchanges} exchanges completed · {me.verifiedSkills.length} verified skills
             </p>
@@ -181,7 +181,7 @@ function Stat({ icon, label, value }: { icon: React.ReactNode; label: string; va
         <span className="text-primary">{icon}</span>
         {label}
       </p>
-      <p className="mt-2 font-display text-2xl font-bold">{value}</p>
+      <p className="mt-2 font-num text-2xl font-bold">{value}</p>
     </div>
   );
 }

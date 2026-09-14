@@ -114,7 +114,7 @@ function DashboardPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-display text-3xl font-bold text-primary-strong">{best.match.score}%</p>
+                  <p className="font-num text-3xl font-bold text-primary-strong">{best.match.score}%</p>
                   <p className="text-[11px] uppercase text-workspace-muted">Match score</p>
                 </div>
               </div>
@@ -209,7 +209,7 @@ function DashboardPage() {
           <div className="rounded-lg border border-workspace-border bg-workspace-card p-6">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-primary">Reputation</p>
             <div className="mt-4 flex items-center gap-4">
-              <span className="flex items-center gap-1.5 font-display text-2xl font-bold">
+              <span className="flex items-center gap-1.5 font-num text-2xl font-bold">
                 <Star className="size-5 fill-accent text-accent" /> {me.rating.toFixed(1)}
               </span>
               <span className="text-xs text-workspace-muted">
@@ -244,7 +244,7 @@ function DashboardPage() {
                         {skill.name}
                         {verified && <BadgeCheck className="size-4 text-primary" />}
                       </p>
-                      <span className="text-xs font-semibold text-workspace-muted">{entry.progress}%</span>
+                      <span className="font-num text-xs font-semibold text-workspace-muted">{entry.progress}%</span>
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-workspace-soft">
                       <div
@@ -303,7 +303,7 @@ function Stat({
     <div className="rounded-lg border border-workspace-border bg-workspace-card p-5">
       <p className="text-[11px] font-semibold uppercase tracking-wide text-workspace-muted">{label}</p>
       <p
-        className={`mt-2 font-display text-2xl font-bold ${accent ? "text-primary-strong" : "text-workspace-foreground"}`}
+        className={`mt-2 font-num text-2xl font-bold ${accent ? "text-primary-strong" : "text-workspace-foreground"}`}
       >
         {value}
       </p>
@@ -317,7 +317,7 @@ function Impact({ icon, value, label }: { icon: React.ReactNode; value: string; 
     <div className="flex items-center gap-3">
       <span className="grid size-9 shrink-0 place-items-center rounded-md bg-sidebar-panel">{icon}</span>
       <div>
-        <p className="font-display text-xl font-bold">{value}</p>
+        <p className="font-num text-xl font-bold">{value}</p>
         <p className="text-[11px] text-sidebar-muted">{label}</p>
       </div>
     </div>

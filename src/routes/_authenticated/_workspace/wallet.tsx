@@ -50,13 +50,13 @@ function WalletPage() {
           </p>
           <div className="mt-7 grid grid-cols-2 gap-4 border-t border-sidebar-border pt-6">
             <div>
-              <p className="flex items-center gap-1.5 font-display text-2xl font-bold">
+              <p className="flex items-center gap-1.5 font-num text-2xl font-bold">
                 <ArrowDownLeft className="size-4 text-primary" /> {creditsEarned}
               </p>
               <p className="text-[11px] text-sidebar-muted">Earned by teaching</p>
             </div>
             <div>
-              <p className="flex items-center gap-1.5 font-display text-2xl font-bold">
+              <p className="flex items-center gap-1.5 font-num text-2xl font-bold">
                 <ArrowUpRight className="size-4 text-accent" /> {creditsSpent}
               </p>
               <p className="text-[11px] text-sidebar-muted">Invested in learning</p>

@@ -131,7 +131,7 @@ function LeaderboardPage() {
                 </p>
               </div>
               <div className="shrink-0 text-right">
-                <p className="font-display text-lg font-bold text-primary-strong">+{skill.growth}%</p>
+                <p className="font-num text-lg font-bold text-primary-strong">+{skill.growth}%</p>
                 <p className="text-[11px] text-workspace-muted">{skill.completedExchanges} exchanges</p>
               </div>
             </div>
@@ -183,7 +183,7 @@ function Row({
         <p className="mt-1 truncate text-xs text-workspace-muted">{impact}</p>
       </div>
       <div className="shrink-0 text-right">
-        <p className="font-display text-lg font-bold">{metric}</p>
+        <p className="font-num text-lg font-bold">{metric}</p>
         <p className="text-[11px] text-workspace-muted">{metricLabel}</p>
       </div>
     </div>
